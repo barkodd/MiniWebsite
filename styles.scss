@@ -1,3 +1,5 @@
+$header-color: rgb(236, 235, 231);
+
 * {
   margin: 0;
   padding: 0;
@@ -28,17 +30,18 @@ h1 {
   }
 }
 body {
-  background-color: rgb(223, 220, 209);
+  background-color: rgb(233, 224, 224);
 }
 
 footer {
+  margin-top: 3rem;
   text-align: center;
   padding: 1rem;
   background-color: rgb(188, 185, 182);
   font-size: 0.8rem;
 }
 .burger {
-  background: rgb(223, 220, 209);
+  background: $header-color;
   border-style: none;
   position: relative;
   display: flex;
@@ -56,6 +59,7 @@ footer {
 
     img {
       width: 3rem;
+      margin-right: 2vw;
     }
   }
   input[type="checkbox"]:checked + .burger-label .open {
@@ -69,7 +73,7 @@ footer {
   .burger-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
+    background-color: $header-color;
     list-style: none;
     padding: 2rem;
     border-radius: 0.5rem;
@@ -111,7 +115,7 @@ footer {
   }
 }
 @media screen and (min-width: 900px) {
-  .burger{
+  .burger {
     position: sticky !important;
     top: 0px !important;
   }
@@ -124,12 +128,10 @@ footer {
     left: 0 !important;
     width: 100vw;
     justify-content: center;
-    background-color: #ebe4de !important;
-    
 
     ul {
       margin: 0;
-      padding: 0;  
+      padding: 0;
     }
 
     li {
@@ -148,6 +150,58 @@ footer {
           border-bottom-style: solid !important ;
           border-color: #000000 !important;
         }
+      }
+    }
+  }
+}
+.articles {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+
+  .article-title {
+    font-weight: 650;
+    font-size: 1.5rem;
+  }
+  .article-desc {
+    color: #3a3a3a;
+  }
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
+  .top {
+    width: 100%;
+    align-self: center;
+    margin-bottom: 1rem;
+    p {
+      margin-left: 1rem;
+    }
+
+    img {
+      width: 100%;
+      display: block;
+    }
+  }
+
+  .bottom-container {
+    display: flex;
+    width: 95%;
+    justify-content: center;
+    align-self: center;
+    padding-bottom: 2rem;
+    border-bottom-style: solid;
+    border-width: 0.1rem;
+    border-color: #a1a1a1;
+
+    .bottom {
+      flex: 1;
+      margin: 0.4rem;
+
+      img {
+        width: 100%;
+        display: block;
       }
     }
   }
