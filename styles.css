@@ -29,7 +29,7 @@ h1 {
   }
 }
 body {
-  background-color: rgb(233, 224, 224);
+  background-color: rgb(238, 234, 234);
 }
 
 footer {
@@ -187,4 +187,39 @@ footer {
 .articles .bottom-container .bottom img {
   width: 100%;
   display: block;
+}
+
+@media screen and (min-width: 900px) {
+  .articles {
+    flex-direction: row !important;
+    max-width: 1200px;
+    margin: 0 auto !important;
+    gap: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    border-bottom-style: solid;
+    border-width: 0.1rem;
+    border-color: #a1a1a1;
+  }
+  .articles .top {
+    align-self: flex-start;
+  }
+  .articles .top .article-title {
+    font-weight: 650;
+    font-size: 2.5rem;
+    margin-left: 0;
+  }
+  .articles .top p {
+    margin-left: 0rem;
+    font-size: 1.1rem;
+  }
+  .articles .bottom-container {
+    flex-direction: column !important;
+    width: 40%;
+    border-style: none;
+  }
+  .articles .bottom-container .bottom {
+    margin: 0 auto !important;
+    padding-bottom: 1rem;
+  }
 }/*# sourceMappingURL=styles.css.map */
