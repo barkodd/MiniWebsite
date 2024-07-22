@@ -7,7 +7,7 @@
 
 .hero {
   width: 100%;
-  height: 50vh;
+  height: 40vh;
   display: flex;
   font-size: 5rem;
   justify-content: center;
@@ -29,11 +29,10 @@ h1 {
   }
 }
 body {
-  background-color: rgb(238, 234, 234);
+  background-color: rgb(240, 243, 243);
 }
 
 footer {
-  margin-top: 3rem;
   text-align: center;
   padding: 1rem;
   background-color: rgb(188, 185, 182);
@@ -82,10 +81,14 @@ footer {
   z-index: 1;
   font-size: 1.5rem;
 }
+.burger .burger-content li {
+  list-style-type: none;
+}
 .burger .burger-content li a {
   display: block;
   margin-bottom: 1rem;
   text-decoration: none;
+  text-align: center;
 }
 .burger .burger-content li a:last-child {
   margin-bottom: 0;
@@ -107,12 +110,17 @@ footer {
 .burger input[type=checkbox]:checked ~ .burger-content li a {
   color: black;
   border-bottom-style: solid;
-  border-width: 0.1rem;
+  border-width: 0.05rem;
 }
 
 @media screen and (min-width: 900px) {
+  .hero {
+    margin-top: 3rem;
+    height: 50vh;
+  }
   .burger {
-    position: sticky !important;
+    position: fixed !important;
+    width: 100%;
     top: 0px !important;
   }
   .burger-content {
@@ -228,7 +236,7 @@ footer {
     padding-bottom: 1rem;
   }
 }
-.image-heading-skaventide {
+.image-heading {
   width: 100%;
   height: 20rem;
   display: flex;
@@ -236,60 +244,86 @@ footer {
   align-items: end;
   background-position: center;
   color: white;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.image-heading p {
+  margin-bottom: 2rem;
+  font-size: 1.7rem;
+  text-align: center;
+  font-weight: 750;
+}
+
+.skaventide {
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgb(0, 0, 0)), url(images/article1.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
-.image-heading-skaventide p {
-  margin-bottom: 2rem;
-  font-size: 1.7rem;
-  text-align: center;
-  font-weight: 750;
 }
 
-.image-heading-bt {
-  width: 100%;
-  height: 20rem;
-  display: flex;
-  justify-content: center;
-  align-items: end;
-  background-position: center;
-  color: white;
+.bt {
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgb(0, 0, 0)), url(images/article2.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
-.image-heading-bt p {
-  margin-bottom: 2rem;
-  font-size: 1.7rem;
-  text-align: center;
-  font-weight: 750;
 }
 
-.image-heading-tyr {
-  width: 100%;
-  height: 20rem;
-  display: flex;
-  justify-content: center;
-  align-items: end;
-  background-position: center;
-  color: white;
+.tyr {
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgb(0, 0, 0)), url(images/article3.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
-.image-heading-tyr p {
-  margin-bottom: 2rem;
-  font-size: 1.7rem;
-  text-align: center;
-  font-weight: 750;
 }
 
 .test {
   margin-top: 2rem;
-  width: 90%;
+  width: 10%;
   margin-left: 1rem;
+}
+
+.h2-home h2 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.gallery-wrapper {
+  margin: 0 auto;
+  margin-top: 2rem;
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+}
+.gallery-wrapper .contact {
+  display: none;
+}
+.gallery-wrapper .gallery-item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  background-color: rgb(255, 255, 255);
+  border-radius: 0.5rem;
+  box-shadow: 0px 1px 1px rgb(187, 187, 187);
+}
+.gallery-wrapper .gallery-item img {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 900px) {
+  .contact {
+    display: flex !important;
+    flex-direction: column;
+    margin-left: 3rem;
+    background-color: rgb(255, 255, 255);
+    margin-bottom: auto;
+    padding: 2rem;
+    position: sticky !important;
+    top: 5rem;
+  }
+  .gallery-wrapper {
+    max-width: 900px;
+    display: flex;
+    flex-direction: row;
+  }
+  .gallery-wrapper .gallery-item {
+    border-radius: 0;
+  }
+  .gallery-wrapper .gallery-item img {
+    border-radius: 0;
+  }
 }/*# sourceMappingURL=styles.css.map */
