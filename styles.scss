@@ -8,7 +8,7 @@ $header-color: rgb(236, 235, 231);
 }
 
 .hero {
-  width: 100vw;
+  width: 100%;
   height: 50vh;
   display: flex;
   font-size: 5rem;
@@ -41,6 +41,7 @@ footer {
   font-size: 0.8rem;
 }
 .burger {
+  height: 3rem;
   background: $header-color;
   border-style: none;
   position: relative;
@@ -48,6 +49,9 @@ footer {
   justify-content: flex-end;
   .close {
     display: none;
+    width: 2rem;
+    margin-top: 0.5rem;
+    margin-right: 4vw;
   }
   input[type="checkbox"] {
     display: none;
@@ -126,7 +130,7 @@ footer {
     border-radius: 0 !important;
     box-shadow: none !important;
     left: 0 !important;
-    width: 100vw;
+    width: 100%;
     justify-content: center;
 
     ul {
@@ -158,7 +162,6 @@ footer {
   display: flex;
   flex-direction: column;
   margin-top: 1rem;
-  
 
   .article-title {
     font-weight: 650;
@@ -195,7 +198,6 @@ footer {
     border-bottom-style: solid;
     border-width: 0.1rem;
     border-color: #a1a1a1;
-   
 
     .bottom {
       flex: 1;
@@ -211,39 +213,108 @@ footer {
 
 @media screen and (min-width: 900px) {
   .articles {
-    
     flex-direction: row !important;
+    width: 80vw;
     max-width: 1200px;
-    margin: 0 auto!important;
+    margin: 0 auto !important;
     gap: 1rem;
     padding-top: 2rem;
     padding-bottom: 2rem;
     border-bottom-style: solid;
     border-width: 0.1rem;
     border-color: #a1a1a1;
-    
-   .top{
-    align-self: flex-start;
-    .article-title {
-      font-weight: 650;
-      font-size: 2.5rem;
-      margin-left: 0;
+
+    .top {
+      align-self: flex-start;
+      .article-title {
+        font-weight: 650;
+        font-size: 2.5rem;
+        margin-left: 0;
+      }
+      p {
+        margin-left: 0rem;
+        font-size: 1.1rem;
+      }
     }
-    p {
-      margin-left: 0rem;
-      font-size: 1.1rem;
-    }
-    
-   
-   }
     .bottom-container {
       flex-direction: column !important;
       width: 40%;
       border-style: none;
-      .bottom{
+      .bottom {
         margin: 0 auto !important;
         padding-bottom: 1rem;
       }
     }
   }
+}
+
+.image-heading-skaventide {
+  width: 100%;
+  height: 20rem;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  background-position: center;
+  color: white;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1)),
+    url(images/article1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  p{
+    margin-bottom: 2rem;
+    font-size: 1.7rem;
+    text-align: center;
+    font-weight: 750;
+    
+  }
+}
+.image-heading-bt {
+  width: 100%;
+  height: 20rem;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  background-position: center;
+  color: white;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1)),
+    url(images/article2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  p{
+    margin-bottom: 2rem;
+    font-size: 1.7rem;
+    text-align: center;
+    font-weight: 750;
+    
+  }
+  
+}
+.image-heading-tyr {
+  width: 100%;
+  height: 20rem;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  background-position: center;
+  color: white;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1)),
+    url(images/article3.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  p{
+    margin-bottom: 2rem;
+    font-size: 1.7rem;
+    text-align: center;
+    font-weight: 750;
+    
+  }
+  
+}
+.test{
+  margin-top: 2rem;
+  width: 90%;
+  margin-left: 1rem;
 }
