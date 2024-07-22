@@ -31,10 +31,11 @@ h1 {
   }
 }
 body {
-  background-color: $background-color
+  background-color: $background-color;
 }
 
 footer {
+  margin-top: 2rem;
   text-align: center;
   padding: 1rem;
   background-color: rgb(188, 185, 182);
@@ -94,7 +95,6 @@ footer {
         text-align: center;
         &:last-child {
           margin-bottom: 0;
-          
         }
       }
     }
@@ -117,14 +117,12 @@ footer {
         color: black;
         border-bottom-style: solid;
         border-width: 0.05rem;
-       
-        
       }
     }
   }
 }
 @media screen and (min-width: 900px) {
-  .hero{
+  .hero {
     margin-top: 3rem;
     height: 50vh;
   }
@@ -132,7 +130,6 @@ footer {
     position: fixed !important;
     width: 100%;
     top: 0px !important;
-   
   }
   .burger-content {
     align-items: center;
@@ -259,9 +256,9 @@ footer {
   }
 }
 
-.image-heading{
+.image-heading {
   width: 100%;
-  height: 20rem;
+  height: 25rem;
   display: flex;
   justify-content: center;
   align-items: end;
@@ -270,52 +267,57 @@ footer {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
- 
-  p{
+  background-position: center;
+  p {
     margin-bottom: 2rem;
     font-size: 1.7rem;
     text-align: center;
     font-weight: 750;
-    
   }
+  
 }
-.skaventide{
+
+
+
+.skaventide {
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1)),
-  url(images/article1.jpg);
+    url(images/article1.jpg);
 }
-.bt{
+.bt {
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1)),
-  url(images/article2.jpg);
+    url(images/article2.jpg);
 }
-.tyr{
+.tyr {
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1)),
-  url(images/article3.jpg);
+    url(images/article3.jpg);
 }
-.test{
+.test {
   margin-top: 2rem;
   width: 10%;
   margin-left: 1rem;
-
 }
 
-.h2-home{
-  h2{
+.h2-home {
+  h2 {
     margin-top: 2rem;
     margin-bottom: 1rem;
     text-align: center;
+    font-size: 2rem;
   }
 }
-.gallery-wrapper{
+.gallery-wrapper {
   margin: 0 auto;
   margin-top: 2rem;
   width: 95%;
   display: flex;
   flex-direction: column;
-  .contact{
-    display: none;
-  }
-  
-  .gallery-item{
+
+
+
+
+
+
+  .gallery-item {
     display: flex;
     flex-direction: column;
     margin-bottom: 2rem;
@@ -323,17 +325,66 @@ footer {
     background-color: rgb(255, 255, 255);
     border-radius: 0.5rem;
     box-shadow: 0px 1px 1px rgb(187, 187, 187);
-    img{
+    p{
+      font-size: 1.2rem;
+      margin-left: 1rem;
+    }
+    img {
       border-top-left-radius: 0.5rem;
       border-top-right-radius: 0.5rem;
       margin-bottom: 1rem;
     }
+  }
+}
+
+.page-contact {
+  width: 85%;
+  background-color: white;
+  margin: auto;
+  margin-top: 2rem;
+  padding: 1rem;
+  
+  p{
+    font-weight: 500;
+  }
+  form{
+    
+    max-width: 150px;
+    font-weight: 600;
+    input{
+      margin-bottom: 0.5rem;
+     
+    }
+  }
+  
+  
+ p{
+  margin-bottom: 0.5rem;
+  
+ }
+
+  .button{
+    width: 75%;
+    margin-top: 0.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border: none;
+    border-style: solid;
+    background-color: white;
+    border-width: 0.07rem;
+    border-color: black;
+    text-align: center;
+    font-weight: 500;
     
   }
- 
+}
+.home {
+  display: none !important;
 }
 @media screen and (min-width: 900px) {
-  .contact{
+
+  .contact, .page-contact{
+    max-width: 400px;
     display: flex !important;
     flex-direction: column;
     margin-left: 3rem;
@@ -342,17 +393,52 @@ footer {
     padding: 2rem;
     position: sticky !important;
     top: 5rem;
+    form{
+      max-width: 150px;
+      font-weight: 600;
+      input{
+        
+        margin-bottom: 0.5rem;
+      }
+    }
+    
+    
+   p{
+    margin-bottom: 0.5rem;
+    
+   }
+
+    .button{
+      width: 75%;
+      margin-top: 0.5rem;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      border: none;
+      background-color: $background-color;
+      border-style: solid;
+      border-width: 0.07rem;
+      border-color: white;
+      text-align: center;
+      font-weight: 500;
+      &:hover{
+        border-color: black;
+        cursor: pointer;
+      }
+    }
   }
-  .gallery-wrapper{
-    max-width: 900px;
+  .page-contact{
+    margin: auto;
+    margin-top: 2rem;
+  }
+  .gallery-wrapper {
+    max-width: 1200px;
     display: flex;
     flex-direction: row;
-    .gallery-item{
-      border-radius: 0 ;
-      img{
+    .gallery-item {
+      border-radius: 0;
+      img {
         border-radius: 0;
       }
     }
   }
-  
 }

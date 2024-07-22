@@ -33,6 +33,7 @@ body {
 }
 
 footer {
+  margin-top: 2rem;
   text-align: center;
   padding: 1rem;
   background-color: rgb(188, 185, 182);
@@ -238,7 +239,7 @@ footer {
 }
 .image-heading {
   width: 100%;
-  height: 20rem;
+  height: 25rem;
   display: flex;
   justify-content: center;
   align-items: end;
@@ -247,6 +248,7 @@ footer {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-position: center;
 }
 .image-heading p {
   margin-bottom: 2rem;
@@ -277,6 +279,7 @@ footer {
   margin-top: 2rem;
   margin-bottom: 1rem;
   text-align: center;
+  font-size: 2rem;
 }
 
 .gallery-wrapper {
@@ -285,9 +288,6 @@ footer {
   width: 95%;
   display: flex;
   flex-direction: column;
-}
-.gallery-wrapper .contact {
-  display: none;
 }
 .gallery-wrapper .gallery-item {
   display: flex;
@@ -298,14 +298,57 @@ footer {
   border-radius: 0.5rem;
   box-shadow: 0px 1px 1px rgb(187, 187, 187);
 }
+.gallery-wrapper .gallery-item p {
+  font-size: 1.2rem;
+  margin-left: 1rem;
+}
 .gallery-wrapper .gallery-item img {
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
   margin-bottom: 1rem;
 }
 
+.page-contact {
+  width: 85%;
+  background-color: white;
+  margin: auto;
+  margin-top: 2rem;
+  padding: 1rem;
+}
+.page-contact p {
+  font-weight: 500;
+}
+.page-contact form {
+  max-width: 150px;
+  font-weight: 600;
+}
+.page-contact form input {
+  margin-bottom: 0.5rem;
+}
+.page-contact p {
+  margin-bottom: 0.5rem;
+}
+.page-contact .button {
+  width: 75%;
+  margin-top: 0.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border: none;
+  border-style: solid;
+  background-color: white;
+  border-width: 0.07rem;
+  border-color: black;
+  text-align: center;
+  font-weight: 500;
+}
+
+.home {
+  display: none !important;
+}
+
 @media screen and (min-width: 900px) {
-  .contact {
+  .contact, .page-contact {
+    max-width: 400px;
     display: flex !important;
     flex-direction: column;
     margin-left: 3rem;
@@ -315,8 +358,39 @@ footer {
     position: sticky !important;
     top: 5rem;
   }
+  .contact form, .page-contact form {
+    max-width: 150px;
+    font-weight: 600;
+  }
+  .contact form input, .page-contact form input {
+    margin-bottom: 0.5rem;
+  }
+  .contact p, .page-contact p {
+    margin-bottom: 0.5rem;
+  }
+  .contact .button, .page-contact .button {
+    width: 75%;
+    margin-top: 0.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border: none;
+    background-color: rgb(240, 243, 243);
+    border-style: solid;
+    border-width: 0.07rem;
+    border-color: white;
+    text-align: center;
+    font-weight: 500;
+  }
+  .contact .button:hover, .page-contact .button:hover {
+    border-color: black;
+    cursor: pointer;
+  }
+  .page-contact {
+    margin: auto;
+    margin-top: 2rem;
+  }
   .gallery-wrapper {
-    max-width: 900px;
+    max-width: 1200px;
     display: flex;
     flex-direction: row;
   }
