@@ -250,12 +250,33 @@ footer {
 .article-wrapper {
   background-color: rgb(240, 243, 243);
   width: 100%;
+  margin-top: 1rem;
+}
+@media screen and (min-width: 900px) {
+  .article-wrapper {
+    width: 60vw;
+    margin: 0 auto;
+    max-width: 1200px;
+    margin-top: 3rem;
+  }
+  .article-wrapper .article-intro {
+    width: 40rem !important;
+  }
+  .article-wrapper h2 {
+    text-align: center;
+    margin-bottom: 2rem !important;
+    font-size: 2rem !important;
+  }
+  .article-wrapper .article-main {
+    width: 40vw;
+    max-width: 700px;
+    margin: 0 auto;
+  }
 }
 .article-wrapper h2 {
   font-size: 1.5rem;
   width: 90%;
   margin: 0 auto;
-  margin-top: 1rem;
   font-weight: 550;
 }
 .article-wrapper .article-intro {
@@ -311,7 +332,7 @@ footer {
 }
 .image-heading h1 {
   margin-bottom: 2rem;
-  font-size: 1.7rem;
+  font-size: 2.2rem;
   text-align: center;
   font-weight: 750;
 }
