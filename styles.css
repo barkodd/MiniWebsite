@@ -39,6 +39,10 @@ body {
   background-color: rgb(240, 243, 243);
 }
 
+main {
+  margin-bottom: 2rem;
+}
+
 footer {
   text-align: center;
   padding: 1rem;
@@ -249,6 +253,8 @@ footer {
   margin-top: 1rem;
 }
 .article-wrapper .article-main .grid-container {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto auto auto;
@@ -279,11 +285,11 @@ footer {
   color: #3a3a3a;
 }
 .article-wrapper .article-main figure img {
-  width: 100%;
+  width: 95%;
 }
 @media screen and (min-width: 900px) {
   .article-wrapper {
-    width: 60vw;
+    width: 100%;
     margin: 0 auto;
     max-width: 1200px;
     margin-top: 3rem;
@@ -302,6 +308,7 @@ footer {
     margin: 0 auto;
   }
   .article-wrapper .article-main .grid-container {
+    margin: 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
@@ -342,9 +349,7 @@ footer {
 .article-wrapper .part-heading {
   font-size: 2rem;
   font-weight: 650;
-  margin-left: 1.5rem;
-  margin-bottom: 1rem;
-  margin-top: 1rem;
+  padding-top: 1rem;
 }
 .article-wrapper .guide-step {
   width: 90%;
@@ -353,28 +358,24 @@ footer {
   flex-direction: column;
   margin-bottom: 1rem;
   margin-top: 2rem;
+  background-color: rgb(255, 255, 255);
+  border-radius: 0.5rem;
+  padding-bottom: 1rem;
+}
+.article-wrapper .guide-step img {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
 .article-wrapper .guide-step:last-child {
-  border-top-style: solid;
   border-width: 0.2rem;
-  border-color: rgb(219, 219, 219);
-  padding-top: 2rem;
   margin-bottom: 2rem;
 }
 @media screen and (min-width: 768px) {
   .article-wrapper .guide-step {
     flex-direction: row;
     align-items: center;
-  }
-  .article-wrapper .guide-step:last-child {
-    flex-direction: column;
-    width: 40rem;
-  }
-  .article-wrapper .guide-step:last-child p {
-    margin-top: 1rem;
-  }
-  .article-wrapper .guide-step:last-child img {
-    width: 100%;
+    padding-bottom: 0;
+    padding-right: 1rem;
   }
   .article-wrapper .guide-step p {
     margin: 0 auto;
@@ -383,6 +384,9 @@ footer {
   .article-wrapper .guide-step img {
     height: 65%;
     width: 65%;
+    border-radius: 0;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
   }
 }
 .article-wrapper img {
@@ -406,7 +410,7 @@ footer {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position: center;
+  background-position: 50% 90%;
 }
 .image-heading h1 {
   margin-bottom: 2rem;
@@ -416,15 +420,15 @@ footer {
 }
 
 .skaventide {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgb(0, 0, 0)), url(images/article1.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgb(0, 0, 0)), url(images/skavenhero2.jpg);
 }
 
 .bt {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgb(0, 0, 0)), url(images/article2.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgb(0, 0, 0)), url(images/black.jpg);
 }
 
 .tyr {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgb(0, 0, 0)), url(images/article3.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgb(0, 0, 0)), url(images/tyrbanner.jpg);
 }
 
 .h2-home h2 {
@@ -553,5 +557,6 @@ footer {
   }
   .gallery-wrapper .gallery-item img {
     border-radius: 0;
+    width: 100%;
   }
 }/*# sourceMappingURL=styles.css.map */
