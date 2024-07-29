@@ -684,7 +684,6 @@ h2 {
   }
 }
 .scroll-arrow {
-  
   position: fixed;
   right: 1rem;
   bottom: 1rem;
@@ -696,13 +695,11 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  &:hover{
+  &:hover {
     background-color: white;
     border-style: solid;
     border-color: black;
-    
   }
-
 }
 
 #scroll-text {
@@ -712,11 +709,13 @@ h2 {
   font-weight: 800;
   font-size: 2rem;
   padding: 1rem;
-  &:hover{
+  &:hover {
     color: black;
   }
 }
-
-html {
-  scroll-behavior: smooth;
-}
+// doen't work with scroll to top button returning to pagename.html. If add something like "div class top" to the top of each page and link the button to it, 
+// results in a new URL after pressing the button (it's a link but calling button for simplicity), which leads to returning to previous page not working as expected
+// Say, you press the btn tp scroll to the top of the page, swipe on your phone to return to the previous page, you get returned to the position where you were before pressing the button.
+// html {
+//   scroll-behavior: smooth;
+// }
