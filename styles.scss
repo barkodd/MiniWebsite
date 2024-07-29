@@ -601,57 +601,69 @@ footer {
   width: 60%;
   margin: auto;
   margin-top: 1rem;
+ 
+  @media screen and (max-width: 900px) {
+    width: 95%;
+    margin: 0 auto;
+  }
   .articles-container {
     display: flex;
     flex-direction: row;
     justify-content: center;
     gap: 1rem;
-    .one {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)),
-        url(images/skaventide.jpg);
-    }
-    .two {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)),
-        url(images/black.jpg);
-    }
-    .three {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)),
-        url(images/tyr5.jpg);
-      
-
-    }
-    section {
-      border-radius: 0.3rem;
-      width: 17rem;
-      padding-top: 16rem;
-      padding-bottom: 2rem;
-      background-position: center;
-      background-size: cover;
-      padding-left: 0.5rem;
-      padding-right: 0.5rem;
-      font-size: 1.4rem;
-      font-weight: 700;
-      text-align: center;
-      a {
-        text-decoration: none;
-        color: white;
-
-    
-      }
+    @media screen and (max-width: 900px) {
+      flex-direction: column;
+      margin: 0 auto;
     }
   }
-  h2 {
-    margin: auto;
+  .one {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)),
+      url(images/skaventide.jpg);
+  }
+  .two {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)),
+      url(images/black.jpg);
+  }
+  .three {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)),
+      url(images/tyr5.jpg);
+  }
+  section {
+    border-radius: 0.3rem;
+    width: 17rem;
+    padding-top: 16rem;
+    padding-bottom: 2rem;
+    background-position: center;
+    background-size: cover;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    font-size: 1.4rem;
+    font-weight: 700;
     text-align: center;
-    margin-bottom: 1rem;
-    border-bottom-style: solid;
-    border-color: $border-color;
-    padding-bottom: 0.5rem;
-    width: 90%;
-    font-size: 1.3rem;
-    font-weight: 500;
+    @media screen and (max-width:900px){
+      width: 100%;
+      
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+    }
   }
 }
+h2 {
+  margin: auto;
+  margin-top: 1rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  border-bottom-style: solid;
+  border-color: $border-color;
+  padding-bottom: 0.5rem;
+  width: 90%;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
 .specs {
   margin: auto;
   background-color: white;

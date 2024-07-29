@@ -565,22 +565,34 @@ footer {
   margin: auto;
   margin-top: 1rem;
 }
+@media screen and (max-width: 900px) {
+  .article-page-wrapper {
+    width: 95%;
+    margin: 0 auto;
+  }
+}
 .article-page-wrapper .articles-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
   gap: 1rem;
 }
-.article-page-wrapper .articles-container .one {
+@media screen and (max-width: 900px) {
+  .article-page-wrapper .articles-container {
+    flex-direction: column;
+    margin: 0 auto;
+  }
+}
+.article-page-wrapper .one {
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url(images/skaventide.jpg);
 }
-.article-page-wrapper .articles-container .two {
+.article-page-wrapper .two {
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url(images/black.jpg);
 }
-.article-page-wrapper .articles-container .three {
+.article-page-wrapper .three {
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url(images/tyr5.jpg);
 }
-.article-page-wrapper .articles-container section {
+.article-page-wrapper section {
   border-radius: 0.3rem;
   width: 17rem;
   padding-top: 16rem;
@@ -593,12 +605,19 @@ footer {
   font-weight: 700;
   text-align: center;
 }
-.article-page-wrapper .articles-container section a {
+@media screen and (max-width: 900px) {
+  .article-page-wrapper section {
+    width: 100%;
+  }
+}
+.article-page-wrapper section a {
   text-decoration: none;
   color: white;
 }
-.article-page-wrapper h2 {
+
+h2 {
   margin: auto;
+  margin-top: 1rem;
   text-align: center;
   margin-bottom: 1rem;
   border-bottom-style: solid;
