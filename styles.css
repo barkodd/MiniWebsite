@@ -565,6 +565,10 @@ footer {
   margin: auto;
   margin-top: 1rem;
 }
+.article-page-wrapper h2 {
+  border-bottom-style: solid;
+  border-color: rgb(219, 219, 219);
+}
 @media screen and (max-width: 900px) {
   .article-page-wrapper {
     width: 95%;
@@ -620,8 +624,6 @@ h2 {
   margin-top: 1rem;
   text-align: center;
   margin-bottom: 1rem;
-  border-bottom-style: solid;
-  border-color: rgb(219, 219, 219);
   padding-bottom: 0.5rem;
   width: 90%;
   font-size: 1.3rem;
