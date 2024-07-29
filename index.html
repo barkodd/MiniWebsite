@@ -15,6 +15,7 @@
 
   <body>
     <header>
+      <div id="scrolltop"></div>
       <div class="burger">
         <input type="checkbox" id="burger-toggle" />
         <label for="burger-toggle" class="burger-label">
@@ -37,7 +38,7 @@
         </div>
       </div>
 
-      <section class="hero">
+      <section class="hero" id="hero">
         <div class="hero-inner">
           <h1>Miniature Painting</h1>
         </div>
@@ -138,8 +139,8 @@
             />
             <label for="message">Your message:</label><br />
             <textarea name="message" id="message"></textarea>
-            <fieldset>
-              <input
+
+            <input
               type="radio"
               id="Borloth"
               name="pick_a_troll"
@@ -155,12 +156,16 @@
               value="Durgurk"
             />
             <label for="Durgurk">Durgurk</label>
-            </fieldset>
-          
+
             <input class="button" type="submit" value="Send message" />
           </form>
         </section>
       </div>
+      <a href="#scrolltop">
+        <div class="scroll-arrow">
+          <div id="scroll-text">^</div>
+        </div>
+      </a>
     </main>
 
     <footer>
