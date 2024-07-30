@@ -1,6 +1,9 @@
 $header-color: rgb(236, 235, 231);
 $background-color: rgb(240, 243, 243);
 $border-color: rgb(219, 219, 219);
+$box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+
+
 
 * {
   margin: 0;
@@ -8,7 +11,7 @@ $border-color: rgb(219, 219, 219);
   box-sizing: border-box;
   font-family: "Inter";
 }
-
+// hero styles with font size adapting to resolution
 .hero {
   width: 100%;
   height: 16rem;
@@ -40,6 +43,7 @@ $border-color: rgb(219, 219, 219);
     font-size: 2rem;
   }
 }
+
 body {
   background-color: $background-color;
 }
@@ -52,6 +56,7 @@ footer {
   background-color: rgb(188, 185, 182);
   font-size: 0.8rem;
 }
+// burger dropdown menu for mobile
 .burger {
   height: 3rem;
   background: $header-color;
@@ -93,7 +98,7 @@ footer {
     list-style: none;
     padding: 2rem;
     border-radius: 0.5rem;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: $box-shadow;
     z-index: 1;
     font-size: 1.5rem;
 
@@ -119,7 +124,7 @@ footer {
     left: 2rem;
     right: 2rem;
     top: 3rem;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    box-shadow: $box-shadow;
     li {
       justify-content: center;
       align-items: center;
@@ -132,6 +137,7 @@ footer {
     }
   }
 }
+// desktop hero and navigation menu (links on top of the screen instead of dropdown)
 @media screen and (min-width: 900px) {
   .hero {
     margin-top: 3rem;
@@ -177,6 +183,7 @@ footer {
     }
   }
 }
+// 3 articles at the home page
 .articles {
   display: flex;
   flex-direction: column;
@@ -229,7 +236,7 @@ footer {
     }
   }
 }
-
+// desktop styling for homepage articles
 @media screen and (min-width: 900px) {
   .articles {
     flex-direction: row !important;
@@ -266,11 +273,13 @@ footer {
     }
   }
 }
+// wrapper for the entire article content on their pages
 .article-wrapper {
   background-color: $background-color;
   width: 100%;
   margin-top: 1rem;
 
+  // styling for the main part of the article, below the heading and short description
   .article-main {
     .grid-container {
       margin-left: 0.5rem;
@@ -311,6 +320,7 @@ footer {
       }
     }
   }
+  //desktop styling 
   @media screen and (min-width: 900px) {
     width: 100%;
     margin: 0 auto;
@@ -383,10 +393,9 @@ footer {
     font-weight: 650;
     padding-top: 1rem;
   }
-
+// styling for a step of a painting guide, with image and text below
   .guide-step {
     width: 90%;
-
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -403,7 +412,7 @@ footer {
       border-width: 0.2rem;
       margin-bottom: 2rem;
     }
-
+//tablet/desktop styling for guide steps, text to the right of the image
     @media screen and (min-width: 768px) {
       flex-direction: row;
       align-items: center;
@@ -434,7 +443,7 @@ footer {
     font-size: 1rem;
   }
 }
-
+//.image-heading - hero for articles. different class because of different styling from the .hero
 .image-heading {
   width: 100%;
   height: 35rem;
@@ -455,7 +464,7 @@ footer {
     font-weight: 750;
   }
 }
-
+//different images for banners on different articles
 .skaventide {
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1)),
     url(images/skavenhero2.jpg);
@@ -468,15 +477,14 @@ footer {
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1)),
     url(images/tyrbanner.jpg);
 }
-
+//latest painted models h2 on the home page
 .h2-home {
   h2 {
     margin-top: 2rem;
-    margin-bottom: 1rem;
-    text-align: center;
     font-size: 2rem;
   }
 }
+//latest painted models image gallery and contact form(desktop only) wrapper
 .gallery-wrapper {
   margin: 0 auto;
   margin-top: 2rem;
@@ -490,7 +498,7 @@ footer {
     margin-bottom: 2rem;
     padding-bottom: 1rem;
     background-color: rgb(255, 255, 255);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    box-shadow: $box-shadow;
     p {
       font-size: 1.2rem;
       margin-left: 1rem;
@@ -500,7 +508,11 @@ footer {
     }
   }
 }
-
+//remove default styling from the fieldset around radiobuttons
+fieldset{
+  border: none;
+}
+//contact form on the homepage not displayed on mobile  
 .contact {
   display: none !important;
 }
@@ -512,9 +524,10 @@ footer {
     margin-top: 2rem !important;
   }
 }
+//.page-contact - contact form on a separate page, .contact - contact form at homepage
 .page-contact,
 .contact {
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: $box-shadow;
   background-color: white;
   padding-top: 1rem;
   padding-bottom: 0.5rem;
@@ -528,7 +541,6 @@ footer {
     font-weight: 600;
     .string-input {
       width: 100%;
-
       margin-right: 1rem;
     }
 
@@ -571,7 +583,7 @@ footer {
     padding-top: 0.5rem;
   }
 }
-
+//contact form visible at homepage on desktop, sticks to the screen
 @media screen and (min-width: 900px) {
   .contact {
     position: sticky !important;
@@ -597,6 +609,7 @@ footer {
     }
   }
 }
+//wrapper for content displayed on articles page
 .article-page-wrapper {
   width: 60%;
   margin: auto;
@@ -620,21 +633,34 @@ footer {
       margin: 0 auto;
     }
   }
+  //different images for three articles
   .one {
     background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)),
-      url(images/skaventide.jpg);
+      url(images/skaventide2.jpg);
+    &:hover {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6)),
+        url(images/skaventide2.jpg);
+    }
   }
   .two {
     background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)),
       url(images/black.jpg);
+    &:hover {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6)),
+        url(images/black.jpg);
+    }
   }
   .three {
     background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)),
       url(images/tyr5.jpg);
+    &:hover {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6)),
+        url(images/tyr5.jpg);
+    }
   }
+  //styling for article image-links on articles page
   section {
-    border-radius: 0.3rem;
-
+    box-shadow: $box-shadow;
     width: 17rem;
     padding-top: 16rem;
     padding-bottom: 2rem;
@@ -651,7 +677,10 @@ footer {
 
     a {
       text-decoration: none;
-      color: white;
+      color: rgb(255, 255, 255);
+      &:hover {
+        color: $border-color;
+      }
     }
   }
 }
@@ -666,7 +695,7 @@ h2 {
   font-size: 1.3rem;
   font-weight: 500;
 }
-
+//specifications page styling
 .specs {
   margin: auto;
   background-color: white;
@@ -676,34 +705,40 @@ h2 {
     text-align: left;
   }
 
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: $box-shadow;
   @media screen and (min-width: 600px) {
     width: 60vw;
     max-width: 500px;
     margin-top: 1rem;
   }
 }
-.scroll-arrow {
+//scroll to top button styling
+.scroll-btn {
   position: fixed;
   right: 1rem;
   bottom: 1rem;
   width: 2.5rem;
   height: 2.5rem;
-  background: rgb(0, 0, 0);
+  background: rgb(255, 255, 255);
   border-radius: 50%;
   z-index: 9;
   display: flex;
   align-items: center;
   justify-content: center;
+  border-style: solid;
+  border-color: rgb(0, 0, 0);
   &:hover {
-    background-color: white;
-    border-style: solid;
-    border-color: black;
+    background-color: black;
+    border: none;
+    
+    
   }
 }
 
-#scroll-text {
-  margin-top: 0.7rem;
+#scroll-arrow {
+  background-image: url(images/arrow.png);
+  background-position: center;
+  background-size: 100%;
   color: white;
   z-index: 10;
   font-weight: 800;
@@ -711,11 +746,13 @@ h2 {
   padding: 1rem;
   &:hover {
     color: black;
+    background-image: url(images/arrow-hover.png);
   }
 }
-// doen't work with scroll to top button returning to pagename.html. If add something like "div class top" to the top of each page and link the button to it, 
+// doen't work with scroll to top button returning to pagename.html. If add something like "div class top" to the top of each page and link the button to it,
 // results in a new URL after pressing the button (it's a link but calling button for simplicity), which leads to returning to previous page not working as expected
-// Say, you press the btn tp scroll to the top of the page, swipe on your phone to return to the previous page, you get returned to the position where you were before pressing the button.
+// Say, you press the btn to scroll to the top of the page, swipe on your phone to return to the previous page, you get returned to the position where you were before pressing the button.
+
 // html {
 //   scroll-behavior: smooth;
 // }
