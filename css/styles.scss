@@ -3,8 +3,6 @@ $background-color: rgb(240, 243, 243);
 $border-color: rgb(219, 219, 219);
 $box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 
-
-
 * {
   margin: 0;
   padding: 0;
@@ -22,7 +20,7 @@ $box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   text-align: center;
   color: white;
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)),
-    url(images/hero.jpg);
+    url(../images/hero.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -320,7 +318,7 @@ footer {
       }
     }
   }
-  //desktop styling 
+  //desktop styling
   @media screen and (min-width: 900px) {
     width: 100%;
     margin: 0 auto;
@@ -393,7 +391,7 @@ footer {
     font-weight: 650;
     padding-top: 1rem;
   }
-// styling for a step of a painting guide, with image and text below
+  // styling for a step of a painting guide, with image and text below
   .guide-step {
     width: 90%;
     margin: 0 auto;
@@ -412,7 +410,7 @@ footer {
       border-width: 0.2rem;
       margin-bottom: 2rem;
     }
-//tablet/desktop styling for guide steps, text to the right of the image
+    //tablet/desktop styling for guide steps, text to the right of the image
     @media screen and (min-width: 768px) {
       flex-direction: row;
       align-items: center;
@@ -467,15 +465,15 @@ footer {
 //different images for banners on different articles
 .skaventide {
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1)),
-    url(images/skavenhero2.jpg);
+    url(../images/skavenhero2.jpg);
 }
 .bt {
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1)),
-    url(images/black.jpg);
+    url(../images/black.jpg);
 }
 .tyr {
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1)),
-    url(images/tyrbanner.jpg);
+    url(../images/tyrbanner.jpg);
 }
 //latest painted models h2 on the home page
 .h2-home {
@@ -509,10 +507,10 @@ footer {
   }
 }
 //remove default styling from the fieldset around radiobuttons
-fieldset{
+fieldset {
   border: none;
 }
-//contact form on the homepage not displayed on mobile  
+//contact form on the homepage not displayed on mobile
 .contact {
   display: none !important;
 }
@@ -636,26 +634,33 @@ fieldset{
   //different images for three articles
   .one {
     background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)),
-      url(images/skaventide2.jpg);
+      url(
+        
+      
+      
+      
+      
+      
+      ../images/skaventide2.jpg);
     &:hover {
       background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6)),
-        url(images/skaventide2.jpg);
+        url(../images/skaventide2.jpg);
     }
   }
   .two {
     background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)),
-      url(images/black.jpg);
+      url(../images/black.jpg);
     &:hover {
       background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6)),
-        url(images/black.jpg);
+        url(../images/black.jpg);
     }
   }
   .three {
     background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)),
-      url(images/tyr5.jpg);
+      url(../images/tyr5.jpg);
     &:hover {
       background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6)),
-        url(images/tyr5.jpg);
+        url(../images/tyr5.jpg);
     }
   }
   //styling for article image-links on articles page
@@ -730,13 +735,11 @@ h2 {
   &:hover {
     background-color: black;
     border: none;
-    
-    
   }
 }
 
 #scroll-arrow {
-  background-image: url(images/arrow.png);
+  background-image: url(../images/arrow.png);
   background-position: center;
   background-size: 100%;
   color: white;
@@ -746,7 +749,7 @@ h2 {
   padding: 1rem;
   &:hover {
     color: black;
-    background-image: url(images/arrow-hover.png);
+    background-image: url(../images/arrow-hover.png);
   }
 }
 // doen't work with scroll to top button returning to pagename.html. If add something like "div class top" to the top of each page and link the button to it,
