@@ -124,26 +124,47 @@
               type="text"
               id="fname"
               name="fname"
-            /><br />
+              placeholder="John"
+              required
+            /><span></span><br />
             <label for="lname">Last name:</label><br />
-            <input class="string-input" type="text" id="lname" name="lname" />
+            <input
+              class="string-input"
+              type="text"
+              id="lname"
+              name="lname"
+              placeholder="Doe"
+              required
+            /><span></span><br />
             <label for="email">Email:</label><br />
-            <input class="string-input" type="email" id="email" name="email" />
+            <input
+              class="string-input"
+              type="email"
+              id="email"
+              name="email"
+              placeholder="john.doe@example.com"
+              required
+            /><span></span><br />
             <label for="tel">Phone number:</label><br />
             <input
               class="string-input"
               type="tel"
               id="tel"
               name="phone-number"
-            />
+              placeholder="123-456-7890"
+              required
+            /><span></span><br />
             <label for="message">Your message:</label><br />
-            <textarea name="message" id="message"></textarea>
-            <fieldset>
+            <textarea name="message" id="message" required></textarea
+            ><span></span><br />
+            <fieldset required>
+              <legend>Pick a troll:</legend>
               <input
                 type="radio"
                 id="Borloth"
                 name="pick_a_troll"
                 value="Borloth"
+                required
               />
               <label for="Borloth">Borloth</label><br />
               <input
@@ -160,8 +181,9 @@
                 value="Durgurk"
               />
               <label for="Durgurk">Durgurk</label>
+              <span></span>
             </fieldset>
-
+            <br />
             <input class="button" type="submit" value="Send message" />
           </form>
         </section>
